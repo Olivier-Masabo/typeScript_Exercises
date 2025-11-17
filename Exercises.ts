@@ -72,3 +72,29 @@ let data1:Api<obj> = {success:true,message:"data fetched success",data:{
     status:"single"
 
 }}
+
+// exercises classes & inheritance
+class Animal{
+    name:string;
+    
+    constructor(name:string){
+        this.name =name;
+    }
+    animalType(){
+        console.log(`${this.name} is from home`)
+    }
+}
+
+class Dog extends Animal{
+    sound:string;
+    constructor(sound:string,name:string){
+        super(name);
+        this.sound =sound
+    }
+soundType(){
+    return `${this.name} can bark louder`
+}
+
+}
+const display =new Dog("barking","spring🦮🐕‍🦺")
+console.log(display.soundType())
