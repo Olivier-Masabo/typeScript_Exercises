@@ -51,3 +51,24 @@ function generic<T>(val: T):T[]{
 }
 console.log(generic(1000))
 console.log(generic("John"))
+
+//exercises 7 interface with generic
+
+interface Api<T>{
+    success:boolean;
+    message:string;
+    data:T;
+}
+
+type obj = {
+    id:number
+    name:string
+    status:string
+}
+
+let data1:Api<obj> = {success:true,message:"data fetched success",data:{
+    id:1,
+    name:"kingsman",
+    status:"single"
+
+}}
