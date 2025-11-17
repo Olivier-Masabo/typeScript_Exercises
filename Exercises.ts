@@ -21,7 +21,7 @@ const product: stock[] =[
 ]
 console.log(product)
 
-//exercise 4
+//exercise 4 type narrowing
 const userDetails = (userId:number | string) =>{
     if(typeof userId === "string"){
         console.log(`your id is in string form: ${userId} `)
@@ -32,3 +32,12 @@ const userDetails = (userId:number | string) =>{
     }
 }
 userDetails("Uid272")
+
+// exercises 5 interfaces
+
+interface Users{
+    name:string;
+    phone?:number
+}
+const user1:Users ={name:"kingsman"}
+const user2:Users ={name:"kingalex",phone:73638932938}
