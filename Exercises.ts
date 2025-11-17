@@ -41,3 +41,13 @@ interface Users{
 }
 const user1:Users ={name:"kingsman"}
 const user2:Users ={name:"kingalex",phone:73638932938}
+
+// intermediate level exercises
+
+// exercises 6 generics
+
+function generic<T>(val: T):T[]{
+    return [val]
+}
+console.log(generic(1000))
+console.log(generic("John"))
