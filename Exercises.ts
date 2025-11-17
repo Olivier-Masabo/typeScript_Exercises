@@ -20,3 +20,15 @@ const product: stock[] =[
       {id:3,name:"hoodie",price:15000}
 ]
 console.log(product)
+
+//exercise 4
+const userDetails = (userId:number | string) =>{
+    if(typeof userId === "string"){
+        console.log(`your id is in string form: ${userId} `)
+    }
+    else{
+        console.log(`your id is in number form:${userId}`);
+
+    }
+}
+userDetails("Uid272")
