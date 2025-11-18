@@ -119,3 +119,19 @@ class Dog1 implements Animal1{
 }
 const final= new Dog1("tobi",2)
 console.log(final.display())
+
+// exercise 9 checking if object has certain property using "in"
+
+type dog = {bark:() => void};
+type cow= {mooo:()=>void};
+
+function myfunc(sound: dog|cow){
+  if("bark" in sound){
+    sound.bark()
+  }
+  else{
+    sound.mooo()
+  }
+}
+const mycow:cow = {mooo:() => console.log("mooo moooo")}
+myfunc(mycow)
