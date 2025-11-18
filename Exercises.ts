@@ -135,3 +135,19 @@ function myfunc(sound: dog|cow){
 }
 const mycow:cow = {mooo:() => console.log("mooo moooo")}
 myfunc(mycow)
+// exercise 10 interface that extends to another
+
+interface inter1{
+  name:string;
+  age:number;
+}
+ interface inter2 extends inter1{
+  status:boolean;
+ }
+
+ const result:inter2 ={
+  status:true,
+  name:"kings",
+  age:38
+ }
+ console.log(result.status)
