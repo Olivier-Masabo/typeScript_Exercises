@@ -98,3 +98,24 @@ soundType(){
 }
 const display =new Dog("barking","spring🦮🐕‍🦺")
 console.log(display.soundType())
+
+// exercises 8 interface and class
+
+interface Animal1{
+  name:string;
+  age:number
+}
+
+class Dog1 implements Animal1{
+  name:string;
+  age:number;
+  constructor(name:string,age:number){
+    this.name=name;
+    this.age=age;
+  }
+  display(){
+    return `my dog ${this.name} has ${this.age} years old`
+  }
+}
+const final= new Dog1("tobi",2)
+console.log(final.display())
