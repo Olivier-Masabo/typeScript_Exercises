@@ -34,3 +34,21 @@ function getFirstElement<D>(arr: D[]): D | undefined {
 console.log(getFirstElement([1, 2, 3])); 
 console.log(getFirstElement(["a", "b", "c"]));
 console.log(getFirstElement([{ id: 1 }, { id: 2 }])); 
+
+//creating two interface that  intersect other
+
+interface Employee {
+    name: string;
+    employeeId: number;
+}   
+
+interface Manager {
+    teamSize: number;
+}   
+
+type ManagerEmployee = Employee & Manager;
+
+function describeManagerEmployee(me: ManagerEmployee) {
+    return `${me.name} ID: ${me.employeeId}) manages a team of ${me.teamSize} people;`
+}
+console.log(describeManagerEmployee({ name: "Bob", employeeId: 123, teamSize: 5 }));
