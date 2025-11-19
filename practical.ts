@@ -25,3 +25,12 @@ function getStatusMessage(status: Status):string{
 }
 
 console.log(getStatusMessage(Status.Pending)); 
+
+// creating generic that accept an array ,return 1st element
+
+function getFirstElement<D>(arr: D[]): D | undefined {
+    return arr[0];
+}   
+console.log(getFirstElement([1, 2, 3])); 
+console.log(getFirstElement(["a", "b", "c"]));
+console.log(getFirstElement([{ id: 1 }, { id: 2 }])); 
