@@ -66,3 +66,22 @@ const add: MathOperation = (c,d,) => c + d;
 const multiply: MathOperation = (c, d,) => c * d;
 
 console.log(applyOperation(10, 5, add));
+
+enum Responses{
+  success =200,
+  Notfound =404,
+  servererror =500,
+}
+
+function returnResponse(values:Responses){
+   if(values=== Responses.success){
+      return `request has be done successfuly: ${values}`
+   }
+   else if(values === Responses.Notfound){
+    return `request not found: ${values}`
+   }else{
+    return `server error : ${values}`
+   }
+}
+  
+console.log(returnResponse(Responses.success))
