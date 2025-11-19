@@ -13,3 +13,15 @@ function introduceUser(user: User) {
 console.log(introduceUser({name:" Alice",
     age:28,
     email:"alice@example.com"}));
+
+    //creating function that accepts an enum
+   enum Status{
+    Active = "Active",
+    Inactive = "Inactive",
+    Pending = "Pending"
+}
+function getStatusMessage(status: Status):string{ 
+   return `The current status is: ${status}`;
+}
+
+console.log(getStatusMessage(Status.Pending)); 
