@@ -52,3 +52,17 @@ function describeManagerEmployee(me: ManagerEmployee) {
     return `${me.name} ID: ${me.employeeId}) manages a team of ${me.teamSize} people;`
 }
 console.log(describeManagerEmployee({ name: "Bob", employeeId: 123, teamSize: 5 }));
+
+
+//Create a type alias for a function that takes two numbers and returns a number.
+
+
+type MathOperation = (a: number, b: number) => number;
+
+function applyOperation(a: number, b: number, operation: MathOperation): number {
+    return operation(a, b,);
+}   
+const add: MathOperation = (c,d,) => c + d;
+const multiply: MathOperation = (c, d,) => c * d;
+
+console.log(applyOperation(10, 5, add));
