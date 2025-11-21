@@ -159,3 +159,18 @@ function formatUserTuple(user:userTuple) {
 }
 console.log(formatUserTuple(["mufasa",20,false]))
 
+//Debug the following  TypeScript Code Without Changing the Core Implementation
+
+interface Car {
+    brand: string;
+    model?: string;
+    price?: number;
+}
+
+function printCarModel(car: Car){
+    console.log(car.model?.toUpperCase());
+    
+    console.log(car.price?.toFixed(2));
+}
+
+printCarModel({ brand: "Toyota" , price: 3000});
