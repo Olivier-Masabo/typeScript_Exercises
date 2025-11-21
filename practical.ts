@@ -85,3 +85,21 @@ function returnResponse(values:Responses){
 }
   
 console.log(returnResponse(Responses.success))
+
+
+// Create a function that accepts a value of type string | number | boolean 
+// and uses type guards to return different messages based on the actual type.
+
+function processValue(value: string | number | boolean ):string{
+    if(typeof value === "string") {
+        return `String value: ${value.toUpperCase()}`
+    }else if(typeof value ==="number"){
+        return `String value: ${value * 2}`
+    }
+    else{
+         return `String value: ${!value}`
+    }
+    
+}
+console.log(processValue(true))
+
