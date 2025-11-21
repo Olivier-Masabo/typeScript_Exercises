@@ -98,3 +98,8 @@ var BankAccount = /** @class */ (function () {
 var account = new BankAccount();
 console.log(account.withdraw(200));
 console.log(account.withdraw(2000));
+function formatUserTuple(user) {
+    var name = user[0], age = user[1], active = user[2];
+    return "".concat(name, " is ").concat(age, " years old and is ").concat(active ? "active" : "inactive");
+}
+console.log(formatUserTuple(["mufasa", 20, false]));

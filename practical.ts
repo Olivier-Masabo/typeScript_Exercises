@@ -134,7 +134,7 @@ class BankAccount{
 
     withdraw(amount:number):boolean{
         if(amount <= this.balance){
-            this.balance = this.balance -amount;
+            this.balance = this.balance - amount;
             console.log(`you withdrawn ${amount} and your new balance is: ${this.balance}`)
             return true;
         }
@@ -149,4 +149,13 @@ const account= new BankAccount()
 console.log(account.withdraw(200));
 console.log(account.withdraw(2000));
 
+//Create a function that represents a user as a tuple with [name: string, age: number, active: boolean].
+
+type userTuple =[name:string, age: number, active: boolean];
+
+function formatUserTuple(user:userTuple) {
+  const [name, age, active] = user;
+  return `${name} is ${age} years old and is ${active ? "active" : "inactive"}`;
+}
+console.log(formatUserTuple(["mufasa",20,false]))
 
