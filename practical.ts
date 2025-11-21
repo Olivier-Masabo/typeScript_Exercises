@@ -117,3 +117,36 @@ const config: Config = {
 
 console.log(config)
 
+
+//Create a class BankAccount with private property balance (number),
+//  constructor that initializes balance, and methods deposit() and withdraw() 
+// that modify the balance
+
+class BankAccount{
+    private balance:number;
+    constructor(initialbalance:number=1000){
+        this.balance =initialbalance;
+    }
+    deposit(amount:number){
+        this.balance = this.balance + amount;
+        return `you deposited ${amount} and your new balance is: ${this.balance}`
+    }
+
+    withdraw(amount:number):boolean{
+        if(amount <= this.balance){
+            this.balance = this.balance -amount;
+            console.log(`you withdrawn ${amount} and your new balance is: ${this.balance}`)
+            return true;
+        }
+        else{
+            console.log(`your balance is not enough to proceed this action`)
+            return false;
+        }
+    }
+}
+
+const account= new BankAccount()
+console.log(account.withdraw(200));
+console.log(account.withdraw(2000));
+
+

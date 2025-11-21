@@ -69,5 +69,32 @@ var config = {
     apiUrl: "https://api.example.com",
     timeout: 5000
 };
-config.apiUrl = "https://facebook.com";
 console.log(config);
+//Create a class BankAccount with private property balance (number),
+//  constructor that initializes balance, and methods deposit() and withdraw() 
+// that modify the balance
+var BankAccount = /** @class */ (function () {
+    function BankAccount(initialbalance) {
+        if (initialbalance === void 0) { initialbalance = 1000; }
+        this.balance = initialbalance;
+    }
+    BankAccount.prototype.deposit = function (amount) {
+        this.balance = this.balance + amount;
+        return "you deposited ".concat(amount, " and your new balance is: ").concat(this.balance);
+    };
+    BankAccount.prototype.withdraw = function (amount) {
+        if (amount <= this.balance) {
+            this.balance = this.balance - amount;
+            console.log("you withdrawn ".concat(amount, " and your new balance is: ").concat(this.balance));
+            return true;
+        }
+        else {
+            console.log("your balance is not enough to proceed this action");
+            return false;
+        }
+    };
+    return BankAccount;
+}());
+var account = new BankAccount();
+console.log(account.withdraw(200));
+console.log(account.withdraw(2000));
