@@ -103,3 +103,17 @@ function processValue(value: string | number | boolean ):string{
 }
 console.log(processValue(true))
 
+//Create an interface Config with readonly properties for apiUrl (string) and timeout (number). 
+
+interface Config{
+    readonly apiUrl:string;
+    readonly timeout:number;
+}
+
+const config: Config = {
+  apiUrl: "https://api.example.com",
+  timeout: 5000
+};
+
+console.log(config)
+

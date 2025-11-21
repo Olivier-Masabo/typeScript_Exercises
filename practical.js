@@ -65,3 +65,9 @@ function processValue(value) {
     }
 }
 console.log(processValue(true));
+var config = {
+    apiUrl: "https://api.example.com",
+    timeout: 5000
+};
+config.apiUrl = "https://facebook.com";
+console.log(config);
