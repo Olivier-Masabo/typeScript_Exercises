@@ -174,3 +174,23 @@ function printCarModel(car: Car){
 }
 
 printCarModel({ brand: "Toyota" , price: 3000});
+
+//Solve all the typing issues in the code without changing the implementation
+
+class Counter {
+  static count:number = 0;
+//   constructor(count:number){
+//     this.count =count;
+//   }
+
+  static increment() {
+    this.count++;
+  }
+
+  static getCount(){
+    return this.count; 
+  }
+}
+
+Counter.increment()
+console.log(Counter.getCount())
