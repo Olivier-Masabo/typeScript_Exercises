@@ -103,3 +103,50 @@ function formatUserTuple(user) {
     return "".concat(name, " is ").concat(age, " years old and is ").concat(active ? "active" : "inactive");
 }
 console.log(formatUserTuple(["mufasa", 20, false]));
+function printCarModel(car) {
+    var _a, _b;
+    console.log((_a = car.model) === null || _a === void 0 ? void 0 : _a.toUpperCase());
+    console.log((_b = car.price) === null || _b === void 0 ? void 0 : _b.toFixed(2));
+}
+printCarModel({ brand: "Toyota", price: 3000 });
+//Solve all the typing issues in the code without changing the implementation
+var Counter = /** @class */ (function () {
+    function Counter() {
+    }
+    //   constructor(count:number){
+    //     this.count =count;
+    //   }
+    Counter.increment = function () {
+        this.count++;
+    };
+    Counter.getCount = function () {
+        return this.count;
+    };
+    Counter.count = 0;
+    return Counter;
+}());
+Counter.increment();
+console.log(Counter.getCount());
+//The following JavaScript code has several type-related issues. Refactor it to work properly in 
+// TypeScript by adding appropriate type annotations and fixing type mismatches.
+function calculateTotal(items) {
+    var total = 0;
+    for (var _i = 0, items_1 = items; _i < items_1.length; _i++) {
+        var item = items_1[_i];
+        total += item.price;
+    }
+    return total.toFixed(2);
+}
+function applyDiscount(amount, discount) {
+    var discountedAmount = amount - (amount * discount);
+    return discountedAmount;
+}
+var products = [
+    { name: "Laptop", price: 999 },
+    { name: "Mouse", price: 25 },
+    { name: "Keyboard", price: 79 }
+];
+var total = Number(calculateTotal(products));
+var discounted = applyDiscount(total, 0.1);
+console.log(total);
+console.log(discounted);

@@ -194,3 +194,31 @@ class Counter {
 
 Counter.increment()
 console.log(Counter.getCount())
+
+
+//The following JavaScript code has several type-related issues. Refactor it to work properly in 
+// TypeScript by adding appropriate type annotations and fixing type mismatches.
+
+function calculateTotal(items:{name:string,price:number}[]) {
+  let total:number = 0;
+  for (let item of items) {
+    total += item.price;
+  }
+  return total.toFixed(2);
+}
+
+function applyDiscount(amount:number, discount:number) {
+  const discountedAmount:number = amount - (amount * discount);
+  return discountedAmount;
+}
+
+const products = [
+  { name: "Laptop", price: 999 },
+  { name: "Mouse", price: 25 },
+  { name: "Keyboard", price: 79 }
+];
+
+const total =Number( calculateTotal(products));
+const discounted = applyDiscount(total, 0.1);
+console.log(total)
+console.log(discounted)
